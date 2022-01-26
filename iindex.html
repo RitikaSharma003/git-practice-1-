@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript tutorial </title>
+</head>
+<body>
+    <h1> welcome to my javascript tutorial </h1>
+    <div id="firstContainer" class="container">
+        <button id="click"onclick="clicked()"> click me </button>
+      </div>
+      <div id="secondcontainer" class="container">
+        <button id="click"on click="clicked()">click me </button>
+        </div>
+    <script>
+    //     console.log("hello world"  , 4+6 ,  "another log");
+        
+    //     alert("me")
+    //     document.write("this is document ");
+    //     console.warn("this is a warning")
+    //     console.error("this is an error");
+    //     var num1=56;
+    //     var num2=67;
+    //     console.log(num1+num2);
+    //     var num12=43;
+    //     var num2=15;
+    //     var marks={
+    //         ram:67,
+    //         raju:90,
+    //         radha:67,
+    //     }
+    //     console.log(marks);
+    //     var arr=[1,2,3,4,5]
+    //     var a=4;
+    //    var b=9;
+    //    console.log("the value of a+b is %d",a+b);
+    //    function avg(a,b)
+    //    {
+    //    c=(a+b)/2;
+    //    return c;
+    //    }
+    //    c1=avg(4,5);
+    //    c2=avg(3,2);
+    //    console.log(c1,c2);
+       var arr=[1,2,3,4,5]
+        // console.log(arr);
+        // for(var i=0;i<arr.length;i++)
+        // {
+        //     console.log(arr[i]);
+        // }
+        arr.forEach(function(element)
+        {
+            console.log(element)
+        })
+        myarr=["hello","what ","when",null,2,3,];
+        console.log(myarr.length)
+        myarr.pop();
+        console.log(myarr);
+        myarr.push("radha")
+        console.log(myarr);
+        myarr.shift();
+        const newlen=myarr.unshift("ram");
+        console.log(newlen);
+        console.log(myarr)
+        let s="hello what is your name"
+        console.log(s.length)
+        console.log(s.indexOf("what"))
+         let myDate = new Date();
+        console.log(myDate);
+        console.log(myDate.getTime());
+        console.log(myDate.getFullYear());
+        console.log(myDate.getDay());
+        console.log(myDate.getMinutes())
+
+        let ele = document.getElementById('click');
+        console.log(ele);
+        eleclass=document.getElementsByClassName('container')
+        console.log(eleclass)
+        eleclass[0].style.background='yellow'
+        eleclass[0].classList.add("text-success")
+        tn=document.getElementsByTagName('button')
+        console.log(tn);
+        create=  document. createElement('p');
+        create.innerText="this is paragraph ";
+        tn[0].appendChild(create)
+        create2=document.createElement('b');
+        create2.innerText= " this is paragraph ";
+        tn[0].appendChild(create2)
+        tn[0].replaceChild(create2,create)
+        sel=document.querySelector('.conatiner')
+        console.log(sel)
+        sel=document.querySelectorAll('.conatiner')
+        console.log(sel)
+           function  clicked(){
+              console.log('the button 3was clicked ')
+            } 
+            function clicked(){
+                console.log('hello button clicked')
+            }
+            window.onload = function(){
+                console.log('the function is loaded')
+            }
+          
+            let prevHTML=document.querySelectorAll('.container')[1].innerHTML;
+            firstContainer.addEventListener('mouseup',function(){
+                document.querySelectorAll('.container')[1].innerHTML=prevHTML;
+                console.log('clickedon container')
+            })
+            firstContainer.addEventListener('mousedown',function(){
+                document.querySelectorAll('.container')[1].innerHTML="<b>we have clicked</b>"
+                console.log('clickedon container')
+            })
+            firstContainer.addEventListener('mouseover',function(){
+                console.log('mouse on container')
+            })
+            firstContainer.addEventListener('mouseout',function(){
+                console.log('mouse is not on container ')
+            })
+            function summ(a,b){
+            return a+b;
+            }
+        //     summ = (a,b)=>{
+        //      return a+b;
+
+        //     }
+        //     logkaro=()=>{
+        //         console.log("i am your log ");
+        //     }
+        //     setTimeout(logkaro,3000)
+        //    he= setInterval(logkaro,3000)
+        //    obj={"name":"harry" ,"length":1,"a":{this:'tha"t' }}
+        //    hel= JSON.stringify(obj)
+        //    console.log(hel)
+        //    console.log(typeof hel)
+           parsed=JSON.parse(`{"name":"harry" ,"length":1,"a":{"this":"that"} }`)
+           console.log(parsed)
+        </script>
+</body>
+</html>
